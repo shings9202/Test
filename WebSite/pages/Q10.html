@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        a:hover {
+            cursor: pointer;
+        }
+
+        @font-face {
+            font-family: 'BinggraeSamanco';
+            src: url('../BinggraeSamanco.ttf') format('truetype');
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/10.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #link {
+            font-family: BinggraeSamanco;
+            text-align: center;
+            font-size: 5vw;
+        }
+
+        #content {
+            padding-top: 100%;
+        }
+    </style>
+
+    <script language="javascript">
+        function setChildValue(index) {
+            var val = location.href.substr(
+                location.href.lastIndexOf('=') + 1
+            );
+            window.location.replace("Q11.html?index=" +val+""+ index);
+        }
+    </script>
+</head>
+<body>
+    <div id="content">
+        <div id="link" style="padding-bottom : 5vw; font-size: 6.5vw;">
+            당신은 돌고래이고 복어를 발견했다.
+        </div>
+        <a onclick=setChildValue(0)>
+            <div id="link" style="
+    ">위험해 보인다 도망가자!</div>
+        </a>
+        <div id="link" style="
+    ">vs</div>
+        <a onclick=setChildValue(1)>
+            <div id="link" style="
+    ">공처럼 생겼는데 한번 놀아볼까?</div>
+        </a>
+    </div>
+</body>
+</html>

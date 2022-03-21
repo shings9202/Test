@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        a:hover {
+            cursor: pointer;
+        }
+
+        @font-face {
+            font-family: 'BinggraeSamanco';
+            src: url('../BinggraeSamanco.ttf') format('truetype');
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/12.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #link {
+            font-family: BinggraeSamanco;
+            text-align: center;
+            font-size: 5vw;
+        }
+
+        #content {
+            padding-top: 100%;
+        }
+    </style>
+
+    <script language="javascript">
+        function setResult(index) {
+            var val = location.href.substr(
+                location.href.lastIndexOf('=') + 1
+            );
+            var rs = val + "" + index;
+            var ei = 0, ns = 0, ft = 0,jp = 0;
+            for (var i = 0; i < 3; i++) {
+                ei += parseInt(rs[i * 4]);
+                ns += parseInt(rs[i * 4+1]);
+                ft += parseInt(rs[i * 4+2]);
+                jp += parseInt(rs[i * 4+3]);
+            }
+
+            var strrs ='';
+
+            if (ei < 2) strrs += 'e';
+            else strrs += 'i';
+
+            if (ns < 2) strrs += 'n';
+            else strrs += 's';
+
+            if (ft < 2) strrs += 'f';
+            else strrs += 't';
+
+            if (jp < 2) strrs += 'j';
+            else strrs += 'p';
+
+            window.location.replace("R1.html?R=" + strrs);
+        }
+    </script>
+</head>
+<body>
+    <div id="content">
+        <div id="link" style="padding-bottom : 5vw; font-size: 6.5vw;">
+            당신은 서열 1위 사자가 되었다.
+        </div>
+        <a onclick=setResult(0)>
+            <div id="link" style="
+    ">서열에 맞게 각각 업무를 부여하고 성과를 평가한다.</div>
+        </a>
+        <div id="link" style="
+    ">vs</div>
+        <a onclick=setResult(1)>
+            <div id="link" style="
+    ">자유주의 국가를 선언하고 각자 하고 싶은 데로 하게 둔다.</div>
+        </a>
+    </div>
+</body>
+</html>

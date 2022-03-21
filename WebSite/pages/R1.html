@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        body {
+            background-repeat: no-repeat;
+            background-size: cover
+        }
+        #content {
+            height :100vh
+        }
+    </style>
+    <script>
+        function ch_bg() {
+            var val = location.href.substr(
+                location.href.lastIndexOf('=') + 1
+            );
+
+            document.getElementById('content').style.backgroundImage = "url(../images/" + val+"1.png)";
+        }   
+
+        function setResult() {
+            var val = location.href.substr(
+                location.href.lastIndexOf('=') + 1
+            );
+            if (document.getElementById('content').style.backgroundImage == "url(\"../images/" + val + "1.png\")") {
+                
+                document.getElementById('content').style.backgroundImage = "url(../images/" + val + "2.png)";
+            }
+            else
+            {
+                document.getElementById('content').style.backgroundImage = "url(../images/" + val + "1.png)";
+            }
+        }   
+    </script>
+</head>
+<body id="body" onload="ch_bg()">
+    <a  onclick="setResult()">
+        <div id="content" style="
+    "></div>
+    </a>
+</body>
+</html>

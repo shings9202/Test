@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        a:hover {
+            cursor: pointer;
+        }
+
+        @font-face {
+            font-family: 'BinggraeSamanco';
+            src: url('../BinggraeSamanco.ttf') format('truetype');
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/6.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #link {
+            font-family: BinggraeSamanco;
+            text-align: center;
+            font-size: 5vw;
+        }
+
+        #content {
+            padding-top: 100%;
+        }
+        }
+
+        #content {
+            padding-top: 100%;
+        }
+    </style>
+
+    <script language="javascript">
+        function setChildValue(index) {
+            var val = location.href.substr(
+                location.href.lastIndexOf('=') + 1
+            );
+            window.location.replace("Q7.html?index=" + val + "" + index);
+        }
+    </script>
+</head>
+<body>
+    <div id="content">
+        <div id="link" style="padding-bottom : 5vw; font-size: 6.5vw;">
+            처음 보는 보라색 열매가 있다. 당신의 선택은?
+        </div>
+        <a onclick=setChildValue(0)>
+            <div id="link" style="
+    ">먹을 수 있을 것 같다. 먹는다!</div>
+        </a>
+        <div id="link" style="
+    ">vs</div>
+        <a onclick=setChildValue(1)>
+            <div id="link" style="
+    ">그럴싸 하긴 한데.. 냄새 한번 맡아볼까?</div>
+        </a>
+    </div>
+</body>
+</html>

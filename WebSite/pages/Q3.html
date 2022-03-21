@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        a:hover {
+            cursor: pointer;
+        }
+
+        @font-face {
+            font-family: 'BinggraeSamanco';
+            src: url('../BinggraeSamanco.ttf') format('truetype');
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/3.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #link {
+            font-family: BinggraeSamanco;
+            text-align: center;
+            font-size: 5vw;
+        }
+
+        #content {
+            padding-top: 100%;
+        }
+    </style>
+
+    <script language="javascript">
+        function setChildValue(index) {
+            var val = location.href.substr(
+                location.href.lastIndexOf('=') + 1
+            );
+            window.location.replace("Q4.html?index=" + val + "" + index);
+        }
+    </script>
+</head>
+<body>
+    <div id="content">
+        <div id="link" style="padding-bottom : 5vw; font-size: 6.5vw;">
+            당신은 토끼이고 당근이 두 개 있다.
+        </div>
+        <a onclick=setChildValue(0)>
+            <div id="link" style="
+    ">콩 한쪽도 나눠 먹는다는데! 동료에게 건넨다.</div>
+        </a>
+        <div id="link" style="
+    ">vs</div>
+        <a onclick=setChildValue(1)>
+            <div id="link" style="
+    ">언제 기근이 닥칠지 몰라, 굴속에 저장한다.</div>
+        </a>
+    </div>
+</body>
+</html>
