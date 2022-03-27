@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -8,9 +8,66 @@
             margin: 0px;
             padding: 0px;
         }
+        body {
+            background-repeat: no-repeat;
+            background-size: cover
+        }
+        #content {
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;            
+        }
+        ul.linklist li {
+        }
     </style>
+    <script>
+        function ch_bg() {
+            var val = location.href.substr(
+                location.href.lastIndexOf('=') + 1
+            );
+            
+
+            document.getElementById('content').style.backgroundImage = "url(../images/" + val+"2.png)";
+        }        
+    </script>
 </head>
-<body>
-    <img src="../images/img_7.png" style="height:100vh;">
+<body id="body" onload="ch_bg()">
+    <div id="content" style="">
+        <ul  style="list-style: none;">
+            <li>
+                <div style=" height :69vh;"/>
+            </li>
+            <li>
+                <ul id="linklist" style="list-style: none;">
+                    <li style=" margin-bottom: 1.1vh; margin-left:10vw;">
+                        <a href="https://www.instagram.com/qrrating_mbti/?hl=ko">
+                            <div style="margin:auto; height :8vh; width:60vw; align-items:center; display:flex" >                                
+                                <p style="display: inline-block; line-height: normal; vertical-align: middle;"> 더 많은 MBTI 덕질</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li style="margin-bottom: 1.1vh; margin-left:10vw;">
+                        <a href="https://www.instagram.com/hyeon_nuri/?hl=ko">
+                            <div style="        margin: auto;
+        height: 8vh;
+        width: 60vw;
+        align-items: center;
+        display: flex
+">                                
+                                <p style="display: inline-block; line-height: normal; vertical-align: middle;">일러스트레이터, 현누리 인스타그램</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li style="margin-left:10vw; margin-bottom: 0vh; ">
+                        <a href="https://marpple.shop/kr/qrrating" >
+                            <div style="margin: auto; height: 8vh; width: 60vw;align-items:center; display:flex">                                
+                                <p style="display: inline-block; line-height: normal; vertical-align: middle;">﻿각종 캐릭터 굿즈!</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+    </li>
+    </ul>
+    </div>
 </body>
 </html>
